@@ -13,12 +13,17 @@ interface WepServices {
     @GET("/v2/top-headlines/sources")
     fun getTabs(
         @Query("apiKey") apiKey:String,
+        @Query("category") categoryId:String?=null
     ):Call<TabsResponse>
 
     @GET("/v2/everything")
     fun getArticles(
         @Query("apiKey") apiKey:String,
-        @Query("sources") tab:String
+        @Query("sources") tab:String?=null,
+        @Query("pageSize") pageSize:Int?=null,
+        @Query("page") page:Int?=1,
+        @Query("q") query:String?=null
+
     ):Call<ArticlesResponse>
 
 }

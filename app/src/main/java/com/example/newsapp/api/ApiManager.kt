@@ -6,6 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class ApiManager {
 
 
+
     companion object{
 
         val apiKey ="c1996d746b014ed1a943b961d2b1cd07"

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <View
+        android:id="@+id/topView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/background_top_nav"
+        app:layout_constraintHeight_percent=".08"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonBackArr"
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/topView"
+        app:layout_constraintBottom_toBottomOf="@id/topView"
+        android:background="@drawable/back_ar"
+        />
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Details "
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/topView"
+        app:layout_constraintTop_toTopOf="@id/topView"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/articlesImageCardView"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:layout_constraintTop_toBottomOf="@id/topView"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+        <ImageView
+            android:id="@+id/articlesImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/news_test"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/autherTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/articlesImageCardView"
+        app:layout_constraintStart_toStartOf="@id/articlesImageCardView"
+        android:text="Ali Mohamed"
+        android:layout_margin="8dp"
+
+        />
+    <TextView
+        android:id="@+id/articlesTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/autherTextView"
+        app:layout_constraintStart_toStartOf="@id/articlesImageCardView"
+        app:layout_constraintEnd_toEndOf="@id/dateTextViwe"
+        android:text="hhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_margin="8dp"
+        />
+    <TextView
+        android:id="@+id/dateTextViwe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/articlesTextView"
+        app:layout_constraintEnd_toEndOf="@id/articlesImageCardView"
+        android:text="AAAAAAAA"
+        android:layout_margin="8dp"
+        />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/dateTextViwe"
+        app:layout_constraintStart_toStartOf="@id/articlesImageCardView"
+        app:layout_constraintEnd_toEndOf="@id/dateTextViwe"
+        app:layout_constraintBottom_toTopOf="@id/link"
+        android:text="hhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_margin="8dp"
+        />
+
+    <TextView
+        android:id="@+id/link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text=" View Full Article "
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="80dp"
+        android:textStyle="bold"
+        android:textSize="18sp"
+
+        />
+    <ImageView
+        android:id="@+id/linkimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/link"
+        app:layout_constraintBottom_toBottomOf="@id/link"
+        app:layout_constraintTop_toTopOf="@id/link"
+        android:src="@drawable/arrow"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
